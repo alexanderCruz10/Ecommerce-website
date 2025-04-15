@@ -70,7 +70,6 @@ const NavBarItems = () => {
               <i className="icofont-info-circle"/>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
