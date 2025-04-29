@@ -10,6 +10,11 @@ import SingleProduct from './pages/Shop/SingleProduct.jsx'
 import CartPage from './pages/Shop/CartPage.jsx'
 import SingleBlog from './pages/Blog/SingleBlog.jsx'
 import About from './pages/AboutPage/About.jsx'
+import Contact from './pages/ContactPage/Contact.jsx'
+import Login from './components/Login.jsx'
+import AuthProvider from './contexts/AuthProvider.jsx'
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx'
+import SignUp from './components/SignUp.jsx'
 import 'swiper/css';
 
 // bootstrap css
@@ -21,7 +26,8 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import '././assets/css/icofont.min.css';
 import '././assets/css/animate.css';
 import '././assets/css/style.min.css';
-import Contact from './pages/ContactPage/Contact.jsx'
+
+
 
 
 
@@ -60,17 +66,26 @@ const routerr = createBrowserRouter([
     },
     {
       path:"/cart-page",
-      element:<CartPage/>
+      element:<PrivateRoute><CartPage/></PrivateRoute>
     },
     {
       path:"/about",
       element: <About/>
+    },
+    {
+      path:"/login",
+      element: <Login/>
+    },
+    {
+      path:"/sign-up",
+      element: <SignUp/>
     },
   ]
   }
 ])
 
 createRoot(document.getElementById('root')).render(
-
-  <RouterProvider router={routerr} />
+  <AuthProvider>
+    <RouterProvider router={routerr} />
+  </AuthProvider>
 )

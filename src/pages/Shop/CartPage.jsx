@@ -161,10 +161,10 @@ const CartPage = () => {
                             <div className="outline-select">
                                 <select>
                                     <option value="volvo">United Kingdom (UK)</option>
-                                    <option value="saab">Bangladesh</option>
-                                    <option value="saab">Pakisthan</option>
-                                    <option value="saab">India</option>
-                                    <option value="saab">Nepal</option>
+                                    <option value="saab">Canada</option>
+                                    <option value="saab">United States</option>
+                                    <option value="saab">Mexico</option>
+                                    <option value="saab">El Salvador</option>
                                 </select>
                                 <span className="select-icon">
                                     <i className="icofont-rounded-down"></i>

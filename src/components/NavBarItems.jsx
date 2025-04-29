@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import logo from '../assets/images/logo/logo.png'
+import { useContext } from 'react'
+import { AuthContext } from '../contexts/AuthProvider'
 
 const NavBarItems = () => {
  const [menuToggle, setMenuToggle] = useState(false)
